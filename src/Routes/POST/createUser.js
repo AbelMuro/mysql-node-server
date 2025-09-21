@@ -6,6 +6,7 @@ router.post('/create_user', (req, res) => {
     db.execute('INSERT INTO accounts (email, password) VALUES (?, ?)',
         ['wha444444tever@gmail.com', 'wat345'],
         (err, results) => {
+            console.log(results);
             if(err){
                 res.status(500).send(`Error has occurred: ${err.message}`);
                 return;
