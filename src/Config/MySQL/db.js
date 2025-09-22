@@ -1,11 +1,11 @@
 const mysql = require('mysql2');
 
 const pool = mysql.createPool({
-        host: '10.0.0.248',                       // Administration -> Client Connections -> Copy the host
+        host: 'mysql-database.cbgm0e60ctjb.us-west-1.rds.amazonaws.com',                       
         port: 3306,
-        user: 'root',                            // Administration -> Users and Privileges -> Copy the user name
-        password: 'Darkness33!',                 // Use the password that you entered when you installed mySQL
-        database: 'first_schema',                 // The name of the schema/database
+        user: 'admin',                  
+        password: 'Darkness33!',                 
+        database: 'first_schema',                
 });
 
 module.exports = pool;
